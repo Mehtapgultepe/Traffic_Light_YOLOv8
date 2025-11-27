@@ -11,6 +11,26 @@ Completed (Training Successful)
 ---
 
 ## 2. 🚀 Setup and Execution
+### 2.1. Prerequisites and Installation 
+
+The project requires Python 3.x, Ultralytics, and data preparation:
+
+```bash
+# Install the necessary library
+!pip install ultralytics
+
+# --- DATA PREPARATION (REQUIRED) ---
+
+# 1. Mount Google Drive (Requires user permission)
+from google.colab import drive
+drive.mount('/content/drive')
+
+# 2. Copy the zip file from Drive to the local Colab disk
+# NOTE: 'traffic-light.zip' must be present in your Google Drive root!
+!cp "/content/drive/MyDrive/traffic-light.zip" /content/
+
+# 3. Unzip the data silently for use by the model
+!unzip -q /content/traffic-light.zip
 ## 2.2. Training the Model 
 
 To reproduce the training results, the dataset must be downloaded from the source (Roboflow) and placed in Google Drive.
