@@ -11,6 +11,23 @@ Completed (Training Successful)
 ---
 
 ## 2. 🚀 Setup and Execution
+## 2.2. Training the Model 
+
+To reproduce the training results, the dataset must be downloaded from the source (Roboflow) and placed in Google Drive.
+
+The training command used was:
+
+```bash
+# Example command used in Colab
+from ultralytics import YOLO
+
+# Load pre-trained weights
+model = YOLO('yolov8n.pt')
+
+# Train the model for 50 epochs (data path must be set correctly)
+model.train(data='/content/traffic-light/data.yaml', 
+            epochs=50, 
+            imgsz=640)
 
 ### 2.1. Prerequisites and Installation
 [cite_start]The project was executed in a **Google Colab** environment [cite: 50] [cite_start]using **Python** [cite: 49] [cite_start]and the **Ultralytics YOLOv8** framework[cite: 48].
