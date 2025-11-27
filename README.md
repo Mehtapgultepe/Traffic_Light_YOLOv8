@@ -103,7 +103,7 @@ model = YOLO('runs/detect/train/weights/best.pt')
 # NOTE: The 'test_video.mp4' file must be uploaded to Colab's content directory.
 model.predict(source='test_video.mp4', save=True, conf=0.5)
 ---
-3. 📊 Key Performance Metrics
+## $3. 📊 Key Performance Metrics
 The model demonstrated strong performance on the validation set after 50 epochs:
 
 Metric	Value
@@ -113,6 +113,6 @@ Precision	0.94
 Recall	0.95
 F1-Score	0.945
 ---
-4. 📝 Data Source
+## 4. 📝 Data Source
 The custom Traffic Light Detection Dataset was sourced and adapted from Roboflow Universe.
 ---
